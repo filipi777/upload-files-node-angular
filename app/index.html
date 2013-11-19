@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+
+	<div ng-controller="MyCtrl">
+	  <input type="text" ng-model="myModelObj">
+	  <input type="file" ng-file-select="onFileSelect($files)" >
+
+
+	<!-- angular-file-upload-shim is only needed for upload progress/abort or non-HTML5 FormData support-->
+	<!-- NOTE: MUST BE PLACED BEFORE angular.js-->
+	<script src="bower_components/angular-file-upload/angular-file-upload-shim.min.js"></script>
+	<script src="bower_components/angular/angular.min.js"></script>
+	<script src="bower_components/angular-file-upload/angular-file-upload.min.js"></script>
+
+	<script src="main.js"></script>
+	</div>
+</body>
+</html>
